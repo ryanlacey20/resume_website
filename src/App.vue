@@ -1,15 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header>
+    <TitleBar />
+    <t class="TitleBarContents" id="Name">
+      Ryan Lacey
+    </t>
+  </header>
+  
+  <div class="content">
+    <div class="divContainingHomeScreenBox">
+      <HomeScreenBox />
+    </div>
+
+    <div>
+      <!-- Other content here -->
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TitleBar from './components/TitleBar.vue';
+import HomeScreenBox from './components/HomeScreenBox.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TitleBar,
+    HomeScreenBox
   }
 }
 </script>
@@ -21,6 +37,32 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+TitleBar{
+  width: 100%;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content {
+  height: 85vh; /* Set the height of the content container */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center the content */
+}
+
+#Name{
+  justify-content: flex-end;
+  font-size: 3vw;
+
+}
+.divContainingHomeScreenBox {
+  
+  width: 100%;
+  height: 100%; /* This will take up 80% of the .content height */
+}
+
+/* Other styles for HomeScreenBox or its components go here */
 </style>
