@@ -1,7 +1,7 @@
 
 <template>
   <div class = "ButtonContainer">
-    <t>{{buttonText}}</t>
+    <router-link to="/about">{{buttonText}}</router-link>
   </div>
 </template>
 

@@ -13,10 +13,10 @@
 
 <script>
 
-import TitleBarButton from './TitleBarButton.vue';
+import TitleBarButton from './title-bar-button.vue';
 
 export default {
-  name: 'TitleBar',
+  name: 'title-bar',
   components:{
     TitleBarButton
   },
