@@ -2,10 +2,10 @@
 <template>
   <div class="TitleBarContainer">
     <div class="TitleBarContents" id="Buttons">
-      <TitleBarButton buttonText="Home" />
-      <TitleBarButton buttonText="Education" />
-      <TitleBarButton buttonText="Experience" />
-      <TitleBarButton buttonText="Contact" />
+      <TitleBarButton buttonText="Home" routerLink="/"/>
+      <TitleBarButton buttonText="Education" routerLink="/Education"/>
+      <TitleBarButton buttonText="Experience" routerLink="/"/>
+      <TitleBarButton buttonText="Contact" routerLink="/"/>
     </div>
 
 </div>
@@ -13,7 +13,7 @@
 
 <script>
 
-import TitleBarButton from './title-bar-button.vue';
+import TitleBarButton from './TitleBarButton.vue';
 
 export default {
   name: 'title-bar',

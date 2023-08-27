@@ -1,7 +1,7 @@
 
 <template>
   <div class = "ButtonContainer">
-    <router-link to="/about">{{buttonText}}</router-link>
+    <router-link :to="routerLink" class="link">{{buttonText}}</router-link>
   </div>
 </template>
 
@@ -16,7 +16,8 @@ export default {
     }
   },
   props: 
-   ['buttonText'],
+   ['buttonText', 'routerLink'],
+
 
   methods: {
    
@@ -31,8 +32,15 @@ export default {
     align-items: center;
   }
 
-  t {
+  .link {
+    color: #2c3e50;
     font-weight: bold;
-    font-size: 4vw;}
+    font-size: 4vw;
+    text-decoration: none;
+  }
+
+  .link:visited {
+    color: #2c3e50;
+  }
 </style>
 
