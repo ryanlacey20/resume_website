@@ -1,23 +1,23 @@
-
 <template>
   <div class="TitleBarContainer">
     <div class="TitleBarContents" id="Buttons">
       <TitleBarButton buttonText="Home" routerLink="/"/>
       <TitleBarButton buttonText="Education" routerLink="/Education"/>
-      <TitleBarButton buttonText="Experience" routerLink="/"/>
+      <TitleBarButton buttonText="Experience" routerLink="/Experience"/>
       <TitleBarButton buttonText="Contact" routerLink="/"/>
     </div>
-
-</div>
+    <div class="name" id="Name">
+      Ryan Lacey
+    </div>
+  </div>
 </template>
 
 <script>
-
 import TitleBarButton from './TitleBarButton.vue';
 
 export default {
   name: 'title-bar',
-  components:{
+  components: {
     TitleBarButton
   },
   created() {
@@ -28,18 +28,19 @@ export default {
     }
   },
   props: {
-   
+
   },
   methods: {
-   
+
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .TitleBarContainer { 
-  // width: 100%;
   display: flex;
+  justify-content: space-between; /* Positions items at each end */
+  align-items: center; /* Aligns items vertically */
 }
 
 .TitleBarContents {
@@ -48,13 +49,7 @@ export default {
   font-size: 50px;
 }
 
-#Buttons {
-  justify-content: left;
+.name {
+  font-size: 3vw;
 }
-
-#Name {
-  justify-content: right;
-}
-
 </style>
-

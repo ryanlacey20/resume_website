@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <img class="box" id="leftBox" src="./../../Resources/gradPhoto.png">
+    <img class="box" id="leftBox" src="./../../Resources/gradPhoto.jpeg">
 
     <div class="box" id="rightBox" >
       <a href="https://www.infosysbpm.com/" id="topLeft" class="tile">
@@ -69,7 +69,7 @@ export default {
 }
 
 .stacked {
-  flex-direction: column; /* Stacking items vertically */
+  flex-direction: column; /* Stack  vertically */
   justify-content: center; /* Centering vertically within the box */
   background-color: #D9D9D9;
 }

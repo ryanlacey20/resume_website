@@ -1,9 +1,9 @@
 <template>
   <header>
     <TitleBar />
-    <t class="TitleBarContents" id="Name">
+    <!-- <t class="TitleBarContents" id="Name">
       Ryan Lacey
-    </t>
+    </t> -->
   </header>
   
   <div class="content">
@@ -41,11 +41,11 @@ export default {
 TitleBar{
   width: 100%;
 }
-header{
+/* header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 .content {
   height: 85vh; /* Set the height of the content container */
   display: flex;
@@ -53,11 +53,11 @@ header{
   align-items: center; /* Horizontally center the content */
 }
 
-#Name{
+/* #Name{
   justify-content: flex-end;
   font-size: 3vw;
 
-}
+} */
 .divContainingHomeScreenBox {
   
   width: 100%;

@@ -11,7 +11,11 @@ const routes = [
     name: 'Education',
     component: () => import('@/views/EducationPage.vue') // Create an About.vue component
   },
-  // Add more routes as needed
+  {
+    path: '/Experience',
+    name: 'Experience',
+    component: () => import('@/views/ExperiencePage.vue') // Create an About.vue component
+  },
 ];
 
 const router = createRouter({
