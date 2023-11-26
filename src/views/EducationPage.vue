@@ -8,6 +8,41 @@
   </header>
   <main>
     <h1>Education</h1>
+
+    <div id="tableContainer">
+      <table class="highlights-table">
+        <th id="mainHeading" colspan="2">Highlights</th>
+        <tr>
+          <th class="left-column">First Class Honours</th>
+          <th>Second Class Honours</th>
+        </tr>
+        <tr>
+          <td class="left-column">Introduction to programming - 80%</td>
+          <td>Financial Strategy</td>
+        </tr>
+        <tr>
+          <td class="left-column">Foundations of Computer Science I - 71%</td>
+          <td>Advanced Programming with Java</td>
+        </tr>
+        <tr>
+          <td class="left-column">Intermediate programming - 84%</td>
+          <td>Software Enterprise Project</td>
+        </tr>
+        <tr>
+          <td class="left-column">Economics of Managerial Decision Making - 71% </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="left-column">Software Engineering - 74%</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="left-column"> Team Software Project - 70%</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
     <h2>DCU 2018-2019</h2>
 
     <article>
@@ -63,20 +98,21 @@
           in a more human capital orientation as opposed to a purely financial approach. In other work team skills, people
           management and organisation were instilled. A first class honours grade of 71% was achieved in this module.
         </div>
-        <img src="./../../Resources/gradPhotoNoScroll.jpeg" />
+        <img src="./../../Resources/gradPhotoNoScroll.jpeg" id="gradPhoto" />
       </div>
 
       <div id="uccSecondHalf">
-        <div class="textSection">
+        <a href="https://github.com/ryanlacey20/SafeWay/blob/main/Report%20on%20SafeWay-%20A%20Personal%20Safety%20App.pdf"
+          id="safeWayImageContainer">
+          <img src="../../Resources/safeWayCover.jpg" id="safeWayCover">
+        </a>
+        <div class="textSection" id="textSection2">
           <h3>Year 3</h3>
           <h4>CS3500 - Software Engineering</h4>
           CS3500 focused on large scale projects and the approach that should be taken, for example agile methodologies
-          and
-          a
-          strong emphasis on group work and group projects. Outlining the requirements of a project and modelling software
-          before and during development were key points as well as project management techniques and documentation. A
-          first
-          class honours grade of 74% was achieved in this module.
+          and a strong emphasis on group work and group projects. Outlining the requirements of a project and modelling
+          software before and during development were key points as well as project management techniques and
+          documentation. A first class honours grade of 74% was achieved in this module.
 
           <h4>CS3318 - Advanced Programming with Java</h4>
           CS3318 was a java oriented module, focusing on the advanced aspects of Java programming and Java project
@@ -84,8 +120,7 @@
           including developing projects (using an IDE), structuring projects (using packages), project documentation (with
           JavaDoc), testing (with JUnit), version control (with GIT), and deployment. Advanced Java including defensive
           programming (with exceptions) and event-driven software and graphical user interfaces.” A second class honours
-          was
-          achieved in this module.
+          was achieved in this module.
 
           <h4>CS3305 - Team Software Project</h4>
           CS3305 was a software assignment graded on the following criterias:
@@ -101,13 +136,16 @@
           A large portion of final year was spent on CS4503, this was my dissertation and consisted of designing an
           application which was conceptualised and proposed by myself. The application “SafeWay” was a personal safety iOS
           application, the front and backend was created by myself as well as the UI and UX. The implementation and design
-          process can be found here
-          https://github.com/ryanlacey20/SafeWay/blob/main/Report%20on%20SafeWay-%20A%20Personal%20Safety%20App.pdf which
+          process can be found <a
+            href="https://github.com/ryanlacey20/SafeWay/blob/main/Report%20on%20SafeWay-%20A%20Personal%20Safety%20App.pdf">
+            here</a>
+          which
           links to the full dissertation on GitHub. The code can also be found here https://github.com/ryanlacey20/SafeWay
           .
 
           A second class honours was achieved for the dissertation, narrowly missing a first class honours by 2%
         </div>
+
       </div>
     </article>
   </main>
@@ -134,11 +172,11 @@ article {
   text-align: start;
 }
 
-img {
+#gradPhoto {
   width: 48%;
-  margin-left: 2%;
   margin-top: 5%;
   margin-bottom: 5%;
+  height: 90%;
 }
 
 #uccFirstHalf {
@@ -146,12 +184,80 @@ img {
 }
 
 .textSection {
-  width: 48%;
   margin-right: 2%;
 }
 
+img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 #uccSecondHalf {
-  margin-left: 50%;
+  display: flex;
+  width: 100%;
+}
+
+#safeWayImageContainer {
+  border: 1ch;
+  width: 50%;
+  height: 100%;
+}
+
+#safeWayCover {
+  width: 98%;
+  height: 100%;
+
+
+}
+
+#tableContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#textSection2 {
+  width: 50%;
+  margin-left: 2%;
+
+}
+
+.highlights-table {
+
+  width: 75%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#mainHeading {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.highlights-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+
+}
+
+.highlights-table th {
+  background-color: #7f8da0;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.highlights-table tbody tr:nth-child(even) {
+  background-color: #ecefffbc;
+
+}
+
+.highlights-table td.left-column {
+  border-right: 1px solid #ddd;
   width: 50%;
 }
 </style>
