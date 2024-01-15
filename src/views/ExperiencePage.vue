@@ -1,18 +1,22 @@
 
 <template>
   <header>
-    <TitleBar/>
+    <TitleBar />
     <!-- <t class="TitleBarContents" id="Name">
       Ryan Lacey
     </t> -->
   </header>
+  <main>
+    <img src="../../Resources/siteUnderConstruction.jpg" />
+    <a href="http://www.freepik.com">Designed by studiogstock / Freepik</a>
+  </main>
 </template>
 
 <script>
 import TitleBar from './../components/TitleBar.vue';
 export default {
   name: 'ExperiencePage',
-  components: {TitleBar},
+  components: { TitleBar },
   created() {
 
   },
@@ -21,15 +25,25 @@ export default {
     }
   },
   props: {
-   
+
   },
   methods: {
-   
+
   },
 }
 </script>
 
 <style lang="scss" scoped>
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
+img {
+  margin-top: 10%;
+  width: 20%;
+
+}
 </style>
 

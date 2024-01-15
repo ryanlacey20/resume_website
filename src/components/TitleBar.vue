@@ -1,10 +1,11 @@
 <template>
   <div class="TitleBarContainer">
     <div class="TitleBarContents" id="Buttons">
-      <TitleBarButton buttonText="Home" routerLink="/"/>
-      <TitleBarButton buttonText="Education" routerLink="/Education"/>
-      <TitleBarButton buttonText="Experience" routerLink="/Experience"/>
-      <TitleBarButton buttonText="Contact" routerLink="/"/>
+      <TitleBarButton buttonText="Home" routerLink="/" />
+      <TitleBarButton buttonText="Education" routerLink="/Education" />
+      <TitleBarButton buttonText="Experience" routerLink="/Experience" />
+      <TitleBarButton buttonText="Contact" routerLink="/Contact" />
+
     </div>
     <div class="name" id="Name">
       Ryan Lacey
@@ -37,10 +38,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.TitleBarContainer { 
+.TitleBarContainer {
   display: flex;
-  justify-content: space-between; /* Positions items at each end */
-  align-items: center; /* Aligns items vertically */
+  justify-content: space-between;
+  /* Positions items at each end */
+  align-items: center;
+  /* Aligns items vertically */
 }
 
 .TitleBarContents {

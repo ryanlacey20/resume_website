@@ -4,8 +4,7 @@
 			"path": "."
 		},
 		{
-			"path": "Resources"
+			"path": "."
 		}
-	],
-	"settings": {}
+	]
 }
