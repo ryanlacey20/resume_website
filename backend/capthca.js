@@ -1,16 +1,16 @@
-const express = require('express');
-const axios = require('axios');
-const bodyParser = require('body-parser');
-const secretKey = process.env.CAPTCHA_SECRET_KEY;
+import express from 'express';
+import { post } from 'axios';
+import { json } from 'body-parser';
+
+const secretKey = process.env.CAPTCHA_SECRET_KEY || 'your_default_value_if_needed';
 
 const app = express();
-app.use(bodyParser.json());
+app.use(json());
 
 app.post('/api/verify-recaptcha', async (req, res) => {
   const recaptchaResponse = req.body.recaptchaResponse;
-
   try {
-    const verificationResult = await axios.post('https://www.google.com/recaptcha/api/siteverify', {
+    const verificationResult = await post('https://www.google.com/recaptcha/api/siteverify', {
       secret: secretKey,
       response: recaptchaResponse,
     });

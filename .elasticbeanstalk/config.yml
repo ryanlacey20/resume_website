@@ -3,4 +3,4 @@ branch-defaults:
     environment: null
     group_suffix: null
 global:
-  profile: eb-cli
+  profile: null
