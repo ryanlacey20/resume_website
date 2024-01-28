@@ -22,12 +22,17 @@
     "volar": "latest"
   },
   "engines": {
-    "node": "^17"
+    "node": "^16"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
