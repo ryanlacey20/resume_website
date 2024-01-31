@@ -1,13 +1,15 @@
+<!-- ContactPage.vue -->
 <template>
   <div>
     <header>
-
       <TitleBar />
     </header>
     <main>
-      <!-- Button to initiate reCAPTCHA verification -->
-      <button @click="executeRecaptcha">Verify</button>
-
+      <!-- reCAPTCHA container -->
+      <form @submit.prevent="submitForm">
+        <div class="g-recaptcha" data-sitekey="6LcMi1UpAAAAAIXCq8X8B-az20bO8oBPtPZiuiD4"></div>
+        <button type="submit">Submit</button>
+      </form>
       <!-- Display contact details if verification is successful -->
       <ul v-if="showContactDetails">
         <li>E-Mail: ryanpatricklacey@gmail.com</li>
@@ -22,68 +24,50 @@
 <script>
 import TitleBar from './../components/TitleBar.vue';
 import axios from 'axios';
-import { ref } from 'vue';
 
 export default {
   name: 'ContactPage',
   components: { TitleBar },
   setup() {
-    // Reactive variable to control the visibility of contact details
-    const showContactDetails = ref(false);
-
-    // Backend endpoint where reCAPTCHA verification will be sent
-    const endPoint = "http://localhost:3000/";
-
-    // Function to execute reCAPTCHA verification
-    const executeRecaptcha = () => {
-      // Use grecaptcha.execute to trigger reCAPTCHA verification
-      grecaptcha.execute('6LcMi1UpAAAAAIXCq8X8B-az20bO8oBPtPZiuiD4', { action: 'submit' })
-        .then((response) => {
-          // Once reCAPTCHA is verified, call the handler
-          onRecaptchaVerified(response);
-        });
-    };
-
-    // Handler for reCAPTCHA verification result
-    const onRecaptchaVerified = (response) => {
-      console.log('Verification successful');
-
-      // Send the verification response to your backend
-      axios.post(endPoint, { recaptchaResponse: response })
-        .then((result) => {
-          if (result.data.success) {
-            // If backend verification is successful, show the contact details
-            showContactDetails.value = true;
-          } else {
-            // If backend verification fails, log an error
-            console.error('Captcha verification failed');
-          }
-        })
-        .catch((error) => {
-          // Handle errors from the verification process
-          console.error('Error verifying captcha:', error);
-        });
-    };
-
-    // Expose variables and functions to the template
+    const endpoint = "http://localhost:3000/api/verify-recaptcha"
+    // const endpoint = "http://httpbin.org/post"
     return {
-      showContactDetails,
-      executeRecaptcha,
-      onRecaptchaVerified,
+      endpoint,
     };
+  },
+  data() {
+    return {
+      showContactDetails: false,
+    };
+  },
+  methods: {
+    async submitForm() {
+      const recaptchaResponse = await grecaptcha.getResponse();
+      try {
+        const response = await axios.post('http://localhost:3000/api/verify-recaptcha', {
+          recaptchaResponse,
+        });
+
+        if (response.data.success) {
+          // Verification successful, show contact details
+          this.showContactDetails = true;
+        } else {
+          // Verification failed
+          console.error('Captcha verification failed', response.data);
+        }
+      } catch (error) {
+        console.error('Error verifying captcha:', error);
+      }
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-/* Your global styles */
 li {
   list-style: none;
   border: 1px solid black;
 }
-
-/* Additional styles for g-recaptcha if needed */
-g-recaptcha {
-  border: 1px solid black;
-}
 </style>
+
+
