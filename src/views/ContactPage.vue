@@ -12,10 +12,7 @@
       </form>
       <!-- Display contact details if verification is successful -->
       <ul v-if="showContactDetails">
-        <li>E-Mail: ryanpatricklacey@gmail.com</li>
-        <li>LinkedIn: <a
-            href="https://www.linkedin.com/in/ryanpatricklacey/">https://www.linkedin.com/in/ryanpatricklacey/</a></li>
-        <li>GitHub: <a href="https://github.com/ryanlacey20">https://github.com/ryanlacey20</a></li>
+        <li>Placeholder</li>
       </ul>
     </main>
   </div>
@@ -29,8 +26,9 @@ export default {
   name: 'ContactPage',
   components: { TitleBar },
   setup() {
-    const endpoint = "http://localhost:3000/api/verify-recaptcha"
+    const endpoint = "https://resume-website-backend-193de0e3770e.herokuapp.com/api/verify-recaptcha"
     // const endpoint = "http://httpbin.org/post"
+    // const endpoint = 'http://localhost:3000/api/verify-recaptcha '
     return {
       endpoint,
     };
@@ -44,7 +42,7 @@ export default {
     async submitForm() {
       const recaptchaResponse = await grecaptcha.getResponse();
       try {
-        const response = await axios.post('http://localhost:3000/api/verify-recaptcha', {
+        const response = await axios.post(this.endpoint, {
           recaptchaResponse,
         });
 
