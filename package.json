@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run generate-redirects && vue-cli-service build",
+    "build": "npm run vue-cli-service build && generate-redirects",
     "generate-redirects": "cp _redirects dist/"
   },
   "dependencies": {
