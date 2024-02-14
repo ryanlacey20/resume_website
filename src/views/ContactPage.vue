@@ -9,7 +9,7 @@
         <div id="recaptcha-container" class="recaptcha-container"></div>
         <form @submit.prevent="submitForm">
           <div class="g-recaptcha" data-sitekey="6LcMi1UpAAAAAIXCq8X8B-az20bO8oBPtPZiuiD4"></div>
-          <button type="submit" class="submit-button">Submit</button>
+          <button type="submit" class="submit-button">Show Details</button>
         </form>
         <!-- Display contact details if verification is successful -->
         <ul v-if="showContactDetails" class="contact-details">
@@ -18,6 +18,7 @@
           <li>Github: {{ github }}</li>
           <li>LinkedIn: {{ linkedin }}</li>
         </ul>
+        <div v-if="recaptchaFailed">Please Complete Recaptcha and Try Again</div>
       </div>
     </main>
   </div>
@@ -34,6 +35,7 @@ export default {
   data() {
     return {
       showContactDetails: false,
+      recaptchaFailed: false,
       email: ref(''),
       phoneNumber: ref(''),
       github: ref(''),
@@ -60,13 +62,16 @@ export default {
           const responseContactdetails = response.data.contactDetails
           console.log('response data here:', responseContactdetails)
           this.showContactDetails = true;
+          this.recaptchaFailed = false;
           this.email = responseContactdetails.email;
           this.phoneNumber = responseContactdetails.phoneNumber;
           this.github = responseContactdetails.github;
           this.linkedin = responseContactdetails.linkedin;
         } else {
           // Verification failed
+          this.recaptchaFailed = true;
           console.error('Captcha verification failed', response.data);
+
         }
       } catch (error) {
         console.error('Error verifying captcha:', error);
