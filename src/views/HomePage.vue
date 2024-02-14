@@ -5,7 +5,7 @@
       Ryan Lacey
     </t> -->
   </header>
-  
+
   <div class="content">
     <div class="divContainingHomeScreenBox">
       <HomeScreenBox />
@@ -38,19 +38,21 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-TitleBar{
+
+TitleBar {
   width: 100%;
 }
+
 /* header{
   display: flex;
   justify-content: space-between;
   align-items: center;
 } */
 .content {
-  height: 85vh; /* Set the height of the content container */
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Horizontally center the content */
+  align-items: center;
 }
 
 /* #Name{
@@ -59,10 +61,8 @@ TitleBar{
 
 } */
 .divContainingHomeScreenBox {
-  
-  width: 100%;
-  height: 100%; /* This will take up 80% of the .content height */
-}
 
-/* Other styles for HomeScreenBox or its components go here */
+  width: 100%;
+  height: 100%;
+}
 </style>

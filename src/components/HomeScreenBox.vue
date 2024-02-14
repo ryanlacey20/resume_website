@@ -12,7 +12,6 @@
       </a>
       <a href="https://www.teamwork.com/" class="tile">
         <div class="card">
-          <!-- <img src="./../../Resources/teamworkIcon.png" alt="Teamwork Icon"> -->
           <img src="./../../Resources/teamworkLogo.svg.png" alt="Teamwork Logo">
         </div>
       </a>
@@ -81,6 +80,7 @@ export default {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
