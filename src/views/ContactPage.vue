@@ -4,19 +4,21 @@
       <TitleBar />
     </header>
     <main>
-      <!-- reCAPTCHA container -->
-      <div id="recaptcha-container"></div>
-      <form @submit.prevent="submitForm">
-        <div class="g-recaptcha" data-sitekey="6LcMi1UpAAAAAIXCq8X8B-az20bO8oBPtPZiuiD4"></div>
-        <button type="submit">Submit</button>
-      </form>
-      <!-- Display contact details if verification is successful -->
-      <ul v-if="showContactDetails">
-        <li>Email: {{ email }}</li>
-        <li>Mobile: {{ phoneNumber }}</li>
-        <li>Github: {{ github }}</li>
-        <li>LinkedIn: {{ linkedin }}</li>
-      </ul>
+      <div class="card">
+        <!-- reCAPTCHA container -->
+        <div id="recaptcha-container" class="recaptcha-container"></div>
+        <form @submit.prevent="submitForm">
+          <div class="g-recaptcha" data-sitekey="6LcMi1UpAAAAAIXCq8X8B-az20bO8oBPtPZiuiD4"></div>
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <!-- Display contact details if verification is successful -->
+        <ul v-if="showContactDetails" class="contact-details">
+          <li>Email: {{ email }}</li>
+          <li>Mobile: {{ phoneNumber }}</li>
+          <li>Github: {{ github }}</li>
+          <li>LinkedIn: {{ linkedin }}</li>
+        </ul>
+      </div>
     </main>
   </div>
 </template>
@@ -75,23 +77,55 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#recaptcha-container {
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  // border: 1px solid black;
+}
+
+.g-recaptcha {
+  margin-bottom: 10px;
   justify-content: center;
 }
 
-ul {
+.submit-button {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e0e0e0;
+}
+
+.contact-details {
   list-style: none;
   padding: 0;
 }
 
-li {
+.contact-details li {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-
-/* Your scoped styles */
 </style>
