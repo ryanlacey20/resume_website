@@ -13,10 +13,10 @@
         </form>
         <!-- Display contact details if verification is successful -->
         <ul v-if="showContactDetails" class="contact-details">
-          <li>Email: {{ email }}</li>
-          <li>Mobile: {{ phoneNumber }}</li>
-          <li>Github: {{ github }}</li>
-          <li>LinkedIn: {{ linkedin }}</li>
+          <li><b>Email:</b> {{ email }}</li>
+          <li><b>Mobile:</b> {{ phoneNumber }}</li>
+          <li><b>Github:</b> <a :href=github>{{ github }} </a></li>
+          <li><b>LinkedIn:</b> <a :href=linkedin>{{ linkedin }}</a></li>
         </ul>
         <div v-if="recaptchaFailed">Please Complete Recaptcha and Try Again</div>
       </div>

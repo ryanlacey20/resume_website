@@ -282,20 +282,7 @@ img {
   margin-bottom: 0;
 }
 
-a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 500;
-}
 
-a:hover {
-  color: #666;
-}
-
-a:focus {
-  outline: none;
-}
 
 #safeWayImageContainer {
   display: flex;
