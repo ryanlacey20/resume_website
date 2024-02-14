@@ -1,4 +1,3 @@
-<!-- ContactPage.vue -->
 <template>
   <div>
     <header>
@@ -6,6 +5,7 @@
     </header>
     <main>
       <!-- reCAPTCHA container -->
+      <div id="recaptcha-container"></div>
       <form @submit.prevent="submitForm">
         <div class="g-recaptcha" data-sitekey="6LcMi1UpAAAAAIXCq8X8B-az20bO8oBPtPZiuiD4"></div>
         <button type="submit">Submit</button>
@@ -25,24 +25,23 @@ import axios from 'axios';
 export default {
   name: 'ContactPage',
   components: { TitleBar },
-  setup() {
-    const endpoint = "https://resume-website-backend-193de0e3770e.herokuapp.com/api/verify-recaptcha"
-    // const endpoint = "http://httpbin.org/post"
-    // const endpoint = 'http://localhost:3000/api/verify-recaptcha '
-    return {
-      endpoint,
-    };
-  },
   data() {
     return {
       showContactDetails: false,
     };
   },
+  mounted() {
+    // Ensure the reCAPTCHA script is fully loaded before rendering the widget
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+
+    document.head.appendChild(script);
+  },
   methods: {
     async submitForm() {
       const recaptchaResponse = await grecaptcha.getResponse();
       try {
-        const response = await axios.post(this.endpoint, {
+        const response = await axios.post("https://resume-website-backend-193de0e3770e.herokuapp.com/api/verify-recaptcha", {
           recaptchaResponse,
         });
 
@@ -66,6 +65,6 @@ li {
   list-style: none;
   border: 1px solid black;
 }
+
+/* Your scoped styles */
 </style>
-
-
