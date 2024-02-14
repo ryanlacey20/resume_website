@@ -58,113 +58,102 @@
         science
         and the remaining three years branched off into “software entrepreneurship.
 
-        <div id="uccFirstHalf">
-          <div class="textSection">
-            <div class="yearSummary card">
-              <h3>Year 1</h3>
-              <h4>“CS1117 - Introduction to programming”</h4>
-              During my first year at UCC, a large emphasis was placed on learning Python and coding practices in general
-              which
-              were thought through this language in the module CS1117. I am proud to have ended the year with a first
-              class
-              honours grade of 80% in this module.
+        <div id="uccFirstHalf" class="yearSummaries">
+          <div class="yearSummary card">
+            <h3>Year 1</h3>
+            <h4>“CS1117 - Introduction to programming”</h4>
+            During my first year at UCC, a large emphasis was placed on learning Python and coding practices in general
+            which
+            were thought through this language in the module CS1117. I am proud to have ended the year with a first
+            class
+            honours grade of 80% in this module.
 
-
-              <h4>“CS1112 - Foundations of Computer Science I” </h4>covered the logic and problem solving aspects behind
-              coding.
-              This module emphasised how to approach and design programmes and software structuring. In this module a
-              first
-              class honours grade of 71% was achieved.
-            </div>
-            <div class="yearSummary card">
-              <h3>Year 2</h3>
-
-              <h4>CS2513 - Intermediate programming</h4> built on the foundations learnt in first years CS1117, and
-              teaching
-              concepts such as object oriented programming with assessment consisting of both a written examination and
-              assessment on software I created. In this module a first class honours of 84% was achieved.
-
-              <h4>EC3008 - Financial Strategy </h4>
-              After branching out into software entrepreneurship, I took on additional modules outside of CS, while still
-              learning the essential and core computing fundamentals and furthering my coding skills. Due to a scheduling
-              error,
-              the course had to undertake a third year finance module, this was unexpected and challenging however the
-              module
-              proved interesting and provided an insight into the challenges and business and software product will face,
-              the
-              risks associated with products and how to strategise and orchestrate decisions based on the risk and cost
-              benefits
-              associated. A second class honours was achieved in this module.
-
-
-              <h4>EC2200 - Economics of Managerial Decision Making</h4>
-              EC2200 focused on microeconomics, in other words, team management, time management, and strategic decision
-              making
-              in a more human capital orientation as opposed to a purely financial approach. In other work team skills,
-              people
-              management and organisation were instilled. A first class honours grade of 71% was achieved in this module.
-            </div>
-
-
+            <h4>“CS1112 - Foundations of Computer Science I” </h4>
+            Covered the logic and problem-solving aspects behind coding.
+            This module emphasized how to approach and design programs and software structuring. In this module, a first
+            class
+            honours grade of 71% was achieved.
           </div>
-          <img src="./../../Resources/gradPhotoNoScroll.jpeg" id="gradPhoto" />
+          <div class="yearSummary card">
+            <h3>Year 2</h3>
+
+            <h4>CS2513 - Intermediate programming</h4> built on the foundations learnt in first years CS1117, and
+            teaching
+            concepts such as object-oriented programming with assessment consisting of both a written examination and
+            assessment on software I created. In this module, a first class honours of 84% was achieved.
+
+            <h4>EC3008 - Financial Strategy </h4>
+            After branching out into software entrepreneurship, I took on additional modules outside of CS, while still
+            learning the essential and core computing fundamentals and furthering my coding skills. Due to a scheduling
+            error,
+            the course had to undertake a third year finance module, this was unexpected and challenging however the
+            module
+            proved interesting and provided an insight into the challenges and business and software product will face,
+            the
+            risks associated with products and how to strategize and orchestrate decisions based on the risk and cost
+            benefits
+            associated. A second class honours was achieved in this module.
+
+            <h4>EC2200 - Economics of Managerial Decision Making</h4>
+            EC2200 focused on microeconomics, in other words, team management, time management, and strategic decision
+            making
+            in a more human capital orientation as opposed to a purely financial approach. In other work team skills,
+            people
+            management and organization were instilled. A first class honours grade of 71% was achieved in this module.
+          </div>
         </div>
 
-
         <div id="uccSecondHalf">
-          <a href="https://github.com/ryanlacey20/SafeWay/blob/main/Report%20on%20SafeWay-%20A%20Personal%20Safety%20App.pdf"
-            id="safeWayImageContainer">
-            <img src="../../Resources/safeWayCover.jpg" id="safeWayCover">
-          </a>
-          <div class="textSection" id="textSection2">
-            <div class="yearSummary card">
-              <h3>Year 3</h3>
-              <h4>CS3500 - Software Engineering</h4>
-              CS3500 focused on large scale projects and the approach that should be taken, for example agile
-              methodologies
-              and a strong emphasis on group work and group projects. Outlining the requirements of a project and
-              modelling
-              software before and during development were key points as well as project management techniques and
-              documentation. A first class honours grade of 74% was achieved in this module.
+          <div class="yearSummary card">
+            <h3>Year 3</h3>
+            <h4>CS3500 - Software Engineering</h4>
+            CS3500 focused on large scale projects and the approach that should be taken, for example agile
+            methodologies
+            and a strong emphasis on group work and group projects. Outlining the requirements of a project and
+            modeling
+            software before and during development were key points as well as project management techniques and
+            documentation. A first class honours grade of 74% was achieved in this module.
 
-              <h4>CS3318 - Advanced Programming with Java</h4>
-              CS3318 was a java oriented module, focusing on the advanced aspects of Java programming and Java project
-              development. The UCC book of modules outlines the module content as the following: “Java project management,
-              including developing projects (using an IDE), structuring projects (using packages), project documentation
-              (with
-              JavaDoc), testing (with JUnit), version control (with GIT), and deployment. Advanced Java including
-              defensive
-              programming (with exceptions) and event-driven software and graphical user interfaces.” A second class
-              honours
-              was achieved in this module.
+            <h4>CS3318 - Advanced Programming with Java</h4>
+            CS3318 was a java oriented module, focusing on the advanced aspects of Java programming and Java project
+            development. The UCC book of modules outlines the module content as the following: “Java project management,
+            including developing projects (using an IDE), structuring projects (using packages), project documentation
+            (with
+            JavaDoc), testing (with JUnit), version control (with GIT), and deployment. Advanced Java including
+            defensive
+            programming (with exceptions) and event-driven software and graphical user interfaces.” A second class
+            honours
+            was achieved in this module.
 
-              <h4>CS3305 - Team Software Project</h4>
-              CS3305 was a software assignment graded on the following criterias:
-              Total Marks 200
-              * Continuous Assessment 200 Marks
-              * Project - 1 x software development project analysis and design documentation, 60 marks (60 Marks)
-              * Project - 1 x software system implementation and test suite, 100 marks (100 Marks)
-              * Presentation - 1 x presentation of the software system, 40 mark (40 Marks)
-              A first class honours grade of 70% was achieved in this module.
-            </div>
-            <div class="yearSummary card">
-              <h3>Year 4</h3>
-              <h4>CS4503 - Software Enterprise Project</h4>
-              A large portion of final year was spent on CS4503, this was my dissertation and consisted of designing an
-              application which was conceptualised and proposed by myself. The application “SafeWay” was a personal safety
-              iOS
-              application, the front and backend was created by myself as well as the UI and UX. The implementation and
-              design
-              process can be found <a
-                href="https://github.com/ryanlacey20/SafeWay/blob/main/Report%20on%20SafeWay-%20A%20Personal%20Safety%20App.pdf">
-                here</a>
-              which
-              links to the full dissertation on GitHub. The code can also be found here
-              https://github.com/ryanlacey20/SafeWay
-              .
+            <h4>CS3305 - Team Software Project</h4>
+            CS3305 was a software assignment graded on the following criteria:
+            Total Marks 200
+            * Continuous Assessment 200 Marks
+            * Project - 1 x software development project analysis and design documentation, 60 marks (60 Marks)
+            * Project - 1 x software system implementation and test suite, 100 marks (100 Marks)
+            * Presentation - 1 x presentation of the software system, 40 mark (40 Marks)
+            A first class honours grade of 70% was achieved in this module.
+          </div>
+          <div class="yearSummary card">
+            <h3>Year 4</h3>
+            <h4>CS4503 - Software Enterprise Project</h4>
+            A large portion of final year was spent on CS4503, this was my dissertation and consisted of designing an
+            application which was conceptualized and proposed by myself. The application “SafeWay” was a personal safety
+            iOS
+            application, the front and backend was created by myself as well as the UI and UX. The implementation and
+            design
+            process can be found <a
+              href="https://github.com/ryanlacey20/SafeWay/blob/main/Report%20on%20SafeWay-%20A%20Personal%20Safety%20App.pdf">
+              here</a>
+            which
+            links to the full dissertation on GitHub. The code can also be found <a
+              href="https://github.com/ryanlacey20/SafeWay"> here.</a>
 
-              A second class honours was achieved for the dissertation, narrowly missing a first class honours by 2%
-            </div>
+            A second class honors was achieved for the dissertation, narrowly missing a first class honors by 2%
+            <a href="https://github.com/ryanlacey20/SafeWay/blob/main/Report%20on%20SafeWay-%20A%20Personal%20Safety%20App.pdf"
+              id="safeWayImageContainer">
+              <img src="../../Resources/safeWayCover.jpg" id="safeWayCover">
+            </a>
           </div>
         </div>
       </article>
@@ -201,7 +190,15 @@ article {
 }
 
 #uccFirstHalf {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+#uccSecondHalf {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .textSection {
@@ -212,30 +209,14 @@ img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#uccSecondHalf {
-  display: flex;
-  width: 100%;
-}
-
-#safeWayImageContainer {
-  border: 1ch;
+.textSection {
   width: 50%;
-  height: 100%;
-}
-
-#safeWayCover {
-  width: 98%;
-  height: 100%;
+  margin-right: 2%;
 }
 
 #tableContainer {
   display: flex;
   justify-content: center;
-}
-
-#textSection2 {
-  width: 50%;
-  margin-left: 2%;
 }
 
 .highlights-table {
@@ -250,11 +231,8 @@ img {
 .highlights-table th {
   background-color: #f7f7f7;
   padding: 20px;
-  /* Increased padding */
   text-align: center;
-  /* Center the text */
   font-size: 1.2em;
-  /* Increased font size */
 }
 
 .highlights-table td {
@@ -280,10 +258,12 @@ img {
 
 .card {
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  margin-top: 20px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .card h3 {
@@ -301,8 +281,37 @@ img {
 .year-summary:last-child {
   margin-bottom: 0;
 }
-</style>
 
+a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #666;
+}
+
+a:focus {
+  outline: none;
+}
+
+#safeWayImageContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#safeWayCover {
+  width: auto;
+  max-height: 400px;
+  border-radius: 15px;
+}
+</style>
 
 
 
