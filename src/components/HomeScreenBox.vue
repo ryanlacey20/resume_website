@@ -1,57 +1,54 @@
 <template>
   <div class="container">
-    <img class="box" id="leftBox" src="./../../Resources/gradPhoto.jpeg">
+    <div class="box" id="leftBox">
+      <img src="./../../Resources/gradPhoto.jpeg" alt="Graduation Photo">
+    </div>
 
-    <div class="box" id="rightBox" >
-      <a href="https://www.infosysbpm.com/" id="topLeft" class="tile">
-        <img id="infosysLogo" src="./../../Resources/infosys.png">
-    </a>
-      <a href="https://www.teamwork.com/" id="topRight" class="tile stacked">
-        <img id="icon" src="./../../Resources/teamworkIcon.png">
-        <img src="./../../Resources/teamworkLogo.svg.png">
+    <div class="box" id="rightBox">
+      <a href="https://www.infosysbpm.com/" class="tile">
+        <div class="card">
+          <img src="./../../Resources/infosys.png" alt="Infosys Logo">
+        </div>
       </a>
-      <a href="https://www.ucc.ie/en/ck401/" id="bottomLeft" class="tile">
-        <img id="uccLogo" src="./../../Resources/uccLogo.png">
+      <a href="https://www.teamwork.com/" class="tile">
+        <div class="card">
+          <!-- <img src="./../../Resources/teamworkIcon.png" alt="Teamwork Icon"> -->
+          <img src="./../../Resources/teamworkLogo.svg.png" alt="Teamwork Logo">
+        </div>
       </a>
-      <a href="https://github.com/ryanlacey20/SafeWay/blob/main/Report%20on%20SafeWay-%20A%20Personal%20Safety%20App.pdf" id="bottomRightTile" class="tile"> <!-- Changed id to bottomRightTile -->
-        <img id="safeWayLogo" src="./../../Resources/safeWay.png"> <!-- Changed id to safeWayLogo -->
+      <a href="https://www.ucc.ie/en/ck401/" class="tile">
+        <div class="card">
+          <img src="./../../Resources/uccLogo.png" alt="UCC Logo">
+        </div>
+      </a>
+      <a href="https://github.com/ryanlacey20/SafeWay/blob/main/Report%20on%20SafeWay-%20A%20Personal%20Safety%20App.pdf"
+        class="tile">
+        <div class="card">
+          <img src="./../../Resources/safeWay.png" alt="SafeWay Logo">
+        </div>
       </a>
     </div>
   </div>
 </template>
 
-
-
 <script>
 export default {
   name: 'HomeScreenBox',
-  created() {
-
-  },
-  data() {
-    return {
-    }
-  },
-  props: {
-   
-  },
-  methods: {
-   
-  },
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .container {
   display: flex;
   height: 100%;
-  width: 100%;
-  // margin-left: 5%;
-  
 }
 
 .box {
   width: 40%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #rightBox {
@@ -66,41 +63,27 @@ export default {
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  padding: 10px;
 }
 
-.stacked {
-  flex-direction: column; /* Stack  vertically */
-  justify-content: center; /* Centering vertically within the box */
-  background-color: #D9D9D9;
+.card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 img {
   max-width: 100%;
   height: auto;
-}
-
-#icon {
-  height: 30%;
-}
-
-#bottomLeft {
-  background-color: #D9D9D9;
-}
-#infosysLogo{
-  width: 100%
-}
-
-#topRight {
-  padding-bottom: 5%;
-}
-
-#uccLogo {
-  width: auto; /* Adjust the width */
-  height: 75%;
-  margin: 0 auto; /* Center horizontally */
-}
-
-#leftBox{
-  object-fit: contain;
 }
 </style>
