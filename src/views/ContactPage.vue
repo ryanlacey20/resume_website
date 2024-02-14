@@ -7,12 +7,17 @@
       <div class="card">
 
         <!-- Display contact details if verification is successful -->
+
+
         <ul v-if="showContactDetails" class="contact-details">
+          <h1>Contact Details</h1>
           <li><b>Email:</b> {{ email }}</li>
           <li><b>Mobile:</b> {{ phoneNumber }}</li>
           <li><b>Github:</b> <a :href=github>{{ github }} </a></li>
           <li><b>LinkedIn:</b> <a :href=linkedin>{{ linkedin }}</a></li>
         </ul>
+
+
 
         <!-- reCAPTCHA container -->
         <form @submit.prevent="submitForm">
@@ -20,7 +25,9 @@
           <button type="submit" class="submit-button">Show Details</button>
         </form>
 
-        <div v-if="recaptchaFailed">Please Complete Recaptcha and Try Again</div>
+        <div v-if="!showContactDetails && !recaptchaFailed">Please Complete Recaptcha to View Contact Details</div>
+
+        <div v-if="recaptchaFailed">Recaptcha Not Completed</div>
       </div>
     </main>
   </div>
@@ -29,11 +36,11 @@
 <script>
 import TitleBar from './../components/TitleBar.vue';
 import axios from 'axios';
-import { ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default {
   name: 'ContactPage',
-  components: { TitleBar },
+  components: { TitleBar, defineComponent },
   data() {
     return {
       showContactDetails: false,
@@ -84,6 +91,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  width: 75%;
+  border-bottom: 2px solid #333;
+}
+
 .card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -126,9 +138,14 @@ form {
 .contact-details {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-details li {
+  width: 80%;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
