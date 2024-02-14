@@ -5,12 +5,7 @@
     </header>
     <main>
       <div class="card">
-        <!-- reCAPTCHA container -->
-        <div id="recaptcha-container" class="recaptcha-container"></div>
-        <form @submit.prevent="submitForm">
-          <div class="g-recaptcha" data-sitekey="6LcMi1UpAAAAAIXCq8X8B-az20bO8oBPtPZiuiD4"></div>
-          <button type="submit" class="submit-button">Show Details</button>
-        </form>
+
         <!-- Display contact details if verification is successful -->
         <ul v-if="showContactDetails" class="contact-details">
           <li><b>Email:</b> {{ email }}</li>
@@ -18,6 +13,13 @@
           <li><b>Github:</b> <a :href=github>{{ github }} </a></li>
           <li><b>LinkedIn:</b> <a :href=linkedin>{{ linkedin }}</a></li>
         </ul>
+
+        <!-- reCAPTCHA container -->
+        <form @submit.prevent="submitForm">
+          <div class="g-recaptcha" data-sitekey="6LcMi1UpAAAAAIXCq8X8B-az20bO8oBPtPZiuiD4"></div>
+          <button type="submit" class="submit-button">Show Details</button>
+        </form>
+
         <div v-if="recaptchaFailed">Please Complete Recaptcha and Try Again</div>
       </div>
     </main>
