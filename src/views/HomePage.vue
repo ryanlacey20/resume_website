@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import TitleBar from './../components/TitleBar.vue';
-import HomeScreenBox from './../components/HomeScreenBox.vue';
+import TitleBar from '@/components/TitleBar/TitleBar.vue';
+import HomeScreenBox from '@/components/HomeScreen/HomeScreenBox.vue';
 
 export default {
   name: 'App',

@@ -1,29 +1,29 @@
 <template>
   <div class="container">
     <div class="box" id="leftBox">
-      <img id="gradPhoto" src="./../../Resources/gradPhoto.jpeg" alt="Graduation Photo">
+      <img id="gradPhoto" src="@/../Resources/gradPhoto.jpeg" alt="Graduation Photo">
     </div>
 
     <div class="box" id="rightBox">
       <a href="https://www.infosysbpm.com/" class="tile">
         <div class="card">
-          <img src="./../../Resources/infosys.png" alt="Infosys Logo">
+          <img src="@/../Resources/infosys.png" alt="Infosys Logo">
         </div>
       </a>
       <a href="https://www.teamwork.com/" class="tile">
         <div class="card">
-          <img src="./../../Resources/teamworkLogo.svg.png" alt="Teamwork Logo">
+          <img src="@/../Resources/teamworkLogo.svg.png" alt="Teamwork Logo">
         </div>
       </a>
       <a href="https://www.ucc.ie/en/ck401/" class="tile">
         <div class="card">
-          <img src="./../../Resources/uccLogo.png" alt="UCC Logo" id="uccLogo">
+          <img src="@/../Resources/uccLogo.png" alt="UCC Logo" id="uccLogo">
         </div>
       </a>
       <a href="https://github.com/ryanlacey20/SafeWay/blob/main/Report%20on%20SafeWay-%20A%20Personal%20Safety%20App.pdf"
         class="tile">
         <div class="card">
-          <img src="./../../Resources/safeWay.png" alt="SafeWay Logo">
+          <img src="@/../Resources/safeWay.png" alt="SafeWay Logo">
         </div>
       </a>
     </div>

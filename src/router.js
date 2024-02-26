@@ -21,6 +21,11 @@ const routes = [
     name: 'Contact',
     component: () => import('@/views/ContactPage.vue')
   },
+  {
+    path: '/Auth',
+    name: 'Auth',
+    component: () => import('@/views/Auth.vue')
+  },
 ];
 
 const router = createRouter({

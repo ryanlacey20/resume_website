@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import TitleBar from './../components/TitleBar.vue';
+import TitleBar from '@/components/TitleBar/TitleBar.vue';
 import axios from 'axios';
 import { defineComponent, ref } from 'vue';
 

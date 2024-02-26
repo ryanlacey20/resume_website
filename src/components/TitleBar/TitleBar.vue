@@ -6,13 +6,15 @@
       <TitleBarButton buttonText="Experience" routerLink="/Experience" />
       <TitleBarButton buttonText="Contact" routerLink="/Contact" />
     </div>
+    <TitleBarButton id="authButton" :font-size="fontSize" :isBold="false" buttonText="Login/Sign Up" routerLink="/Auth" />
     <div class="name">
-      Ryan Lacey
+      {{ name }}
     </div>
   </div>
 </template>
 
 <script>
+import { ref } from 'vue';
 import TitleBarButton from './TitleBarButton.vue';
 
 export default {
@@ -20,6 +22,15 @@ export default {
   components: {
     TitleBarButton
   },
+  setup() {
+    const name = ref('Ryan Lacey');
+    const fontSize = '1.5vw';
+
+    return {
+      name,
+      fontSize
+    };
+  }
 }
 </script>
 
@@ -40,6 +51,10 @@ export default {
 }
 
 .name {
-  font-size: 24px;
+  font-size: 1.75vw;
+}
+
+#authButton {
+  padding-left: 5vw;
 }
 </style>

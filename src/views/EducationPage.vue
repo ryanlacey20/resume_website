@@ -162,7 +162,8 @@
 </template>
 
 <script>
-import TitleBar from './../components/TitleBar.vue';
+import TitleBar from '@/components/TitleBar/TitleBar.vue';
+
 export default {
   name: 'EducationPage',
   components: { TitleBar },
