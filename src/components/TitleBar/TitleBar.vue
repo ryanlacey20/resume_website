@@ -6,7 +6,8 @@
       <TitleBarButton buttonText="Experience" routerLink="/Experience" />
       <TitleBarButton buttonText="Contact" routerLink="/Contact" />
     </div>
-    <TitleBarButton id="authButton" :font-size="fontSize" :isBold="false" buttonText="Login/Sign Up" routerLink="/Auth" />
+    <TitleBarButton v-if="isUserAuthenticatedVar" id="authButton" :font-size="fontSize" :isBold="false"
+      buttonText="Login/Sign Up" routerLink="/Auth" />
     <div class="name">
       {{ name }}
     </div>
@@ -16,6 +17,8 @@
 <script>
 import { ref } from 'vue';
 import TitleBarButton from './TitleBarButton.vue';
+import { isUserAuthenticated } from '@/functions/authFunctions';
+import { getAuth } from 'firebase/auth';
 
 export default {
   name: 'TitleBar',
@@ -25,11 +28,22 @@ export default {
   setup() {
     const name = ref('Ryan Lacey');
     const fontSize = '1.5vw';
+    const isUserAuthenticatedVar = ref(false);
+    const auth = getAuth();
+    console.log("is user authenticated:", isUserAuthenticatedVar.value,
+      "\nauthentication obj:", auth)
 
-    return {
-      name,
-      fontSize
-    };
+
+    isUserAuthenticated()
+      .then(authenticated => {
+        isUserAuthenticatedVar.value = authenticated;
+      })
+      .catch(error => {
+        console.error('Error occurred while checking authentication:', error);
+      });
+
+
+    return { name, fontSize, isUserAuthenticatedVar };
   }
 }
 </script>
