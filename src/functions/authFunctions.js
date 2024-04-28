@@ -10,4 +10,6 @@ const isUserAuthenticated = () => {
     });
 };
 
+
+
 export { isUserAuthenticated };

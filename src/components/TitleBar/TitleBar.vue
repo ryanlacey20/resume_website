@@ -6,8 +6,10 @@
       <TitleBarButton buttonText="Experience" routerLink="/Experience" />
       <TitleBarButton buttonText="Contact" routerLink="/Contact" />
     </div>
-    <TitleBarButton v-if="isUserAuthenticatedVar" id="authButton" :font-size="fontSize" :isBold="false"
+    <TitleBarButton v-if="isUserAuthenticatedVar.value" id="authButton" :font-size="fontSize" :isBold="false"
       buttonText="Login/Sign Up" routerLink="/Auth" />
+    <TitleBarButton v-if="!isUserAuthenticatedVar.value" id="authButton" :font-size="fontSize" :isBold="false"
+      :buttonText="uid.value" routerLink="/Profile" />
     <div class="name">
       {{ name }}
     </div>
@@ -15,9 +17,9 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { onAuthStateChanged } from 'firebase/auth';
 import TitleBarButton from './TitleBarButton.vue';
-import { isUserAuthenticated } from '@/functions/authFunctions';
 import { getAuth } from 'firebase/auth';
 
 export default {
@@ -30,20 +32,25 @@ export default {
     const fontSize = '1.5vw';
     const isUserAuthenticatedVar = ref(false);
     const auth = getAuth();
-    console.log("is user authenticated:", isUserAuthenticatedVar.value,
-      "\nauthentication obj:", auth)
+    const uid = ref("1234")
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // uid.value = user.uid;
+        console.log("uid is:", uid.value)
+        isUserAuthenticatedVar.value = true
 
 
-    isUserAuthenticated()
-      .then(authenticated => {
-        isUserAuthenticatedVar.value = authenticated;
-      })
-      .catch(error => {
-        console.error('Error occurred while checking authentication:', error);
-      });
+        console.log("is user authenticated:", isUserAuthenticatedVar.value,
+          "\nauthentication obj:", auth)
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
 
 
-    return { name, fontSize, isUserAuthenticatedVar };
+    return { name, fontSize, isUserAuthenticatedVar, uid };
   }
 }
 </script>
