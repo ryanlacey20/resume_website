@@ -43,8 +43,10 @@
       <h2>DCU 2018-2019</h2>
 
       <article>
-        I spent a year studying marketing innovation and technology at Dublin City University, during which time I studied
-        modules such as modern technology, creativity and design, economics and general marketing modules. The course gave
+        I spent a year studying marketing innovation and technology at Dublin City University, during which time I
+        studied
+        modules such as modern technology, creativity and design, economics and general marketing modules. The course
+        gave
         me
         an insight into consumerism and focused highly on the theory of “crossing the chasm”. This theory focuses on
         bringing
@@ -52,7 +54,7 @@
         The
         economics side of this course allowed for a smooth transition into Software Entrepreneurship at UCC
       </article>
-      <h2>UCC 2019-2023</h2>
+      <h2>UCC 2019-2023 Overview</h2>
       <article>
         My time at University College Cork consisted of four years, with the first year being pure mainstream computer
         science
@@ -299,6 +301,3 @@ img {
   border-radius: 15px;
 }
 </style>
-
-
-
