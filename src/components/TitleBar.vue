@@ -5,6 +5,7 @@
       <TitleBarButton buttonText="Education" routerLink="/Education" />
       <TitleBarButton buttonText="Experience" routerLink="/Experience" />
       <TitleBarButton buttonText="Contact" routerLink="/Contact" />
+      <TitleBarButton buttonText="Work Examples" routerLink="/Examples" />
     </div>
     <div class="name">
       Ryan Lacey
