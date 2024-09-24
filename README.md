@@ -8,7 +8,7 @@ Available [here](https://ryanlacey.ie/): https://ryanlacey.ie/
 ### Overview:
 Connects to an endpoint from the [personal_project_backends](https://github.com/ryanlacey20/personal_project_backends) repository.  
   This endpoint is hosted at https://resume-website-backend-193de0e3770e.herokuapp.com/api/verify-recaptcha.  
-  The endpoint processes a recaptcha request made from this front-end, passes it to Google Cloud Tools to verify the request is human, protecting sensitive contact information.  
+  The endpoint processes a recaptcha request made using Axios from this front-end, passes it to Google Cloud Tools to verify the request is human, protecting sensitive contact information.  
 
 ## Project setup
 ```
