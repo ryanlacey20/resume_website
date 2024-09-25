@@ -1,4 +1,3 @@
-
 <template>
   <div class="ButtonContainer">
     <router-link :to="routerLink" class="link">{{ buttonText }}</router-link>
@@ -30,12 +29,13 @@ export default {
   margin-right: 2%;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .link {
   color: #2c3e50;
   font-weight: bold;
-  font-size: 3.5vw;
+  font-size: 2vw;
   text-decoration: none;
 }
 
@@ -43,4 +43,3 @@ export default {
   color: #2c3e50;
 }
 </style>
-
