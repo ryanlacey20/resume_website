@@ -72,8 +72,6 @@ export default {
           console.log('response data here:', responseContactdetails)
           this.showContactDetails = true;
           this.recaptchaFailed = false;
-          this.email = responseContactdetails.email;
-          this.phoneNumber = responseContactdetails.phoneNumber;
           this.github = responseContactdetails.github;
           this.linkedin = responseContactdetails.linkedin;
         } else {
